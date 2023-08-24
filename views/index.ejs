@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wisper Your Secret</title>
-    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div class="container">
@@ -17,7 +16,7 @@
     <div id="secret">
         <div class="card">
             <h3>Secret</h3>
-            <% if(locals.secret) { %>
+            <% if(locals.secret && locals.error) { %>
                 <p><%= secret %></p>
             <% } else { %>
                 <p><%= error %></p>
