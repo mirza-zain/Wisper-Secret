@@ -10,9 +10,9 @@ app.get("/", async (req, res) => {
 
 app.post("/submit", async (req, res) => {
     try {
-        const response = await axios.post("https://secrets-api.appbrewery.com/secret");
+        const response = await axios.post("https://secrets-api.appbrewery.com/random");
         const result = response.data;
-        res.render("index.ejs", { secret: result[Math.floor(Math.random()*result.length)]});
+        res.render("index.ejs", { secret: result[Math.floor(Math.random()*result.length)],});
     }
     catch (error) {
         console.log("Failed to make request there are two possible soluition for it either you have send more then 100 requests or you are not connected to internet",error.message);
