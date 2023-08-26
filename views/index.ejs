@@ -10,18 +10,14 @@
         <div class="row">
             <h1>Shush Don't Tell Anyone Your Secrets</h1>
             <h2>Click the button below to reveal your darkest secrets</h2>
-            <button id="secretButton" formaction="/submit">Reveal Secret</button>
+            <input type="button" value="submit" formaction="/submit"/>
         </div>
     </div>
     <div id="secret">
-        <div class="card">
             <h3>Secret</h3>
-            <% if(locals.secret && locals.error) { %>
+            <% if(locals.secret) { %>
                 <p><%= secret %></p>
-            <% } else { %>
-                <p><%= error %></p>
-            <% } %>     
-        </div>
+            <% }%> 
     </div>
 
     <footer>
